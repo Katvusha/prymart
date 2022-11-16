@@ -47,6 +47,8 @@ gem "sassc-rails"
 
 gem 'devise'
 
+gem "cloudinary"
+
 gem 'faker'
 
 gem "font-awesome-sass", "~> 6.1"
