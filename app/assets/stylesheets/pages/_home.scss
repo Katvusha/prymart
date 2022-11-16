@@ -35,9 +35,25 @@
     border-radius: 10px;
   }
 
-  p {
+  .category {
     position: absolute;
     bottom: 16px;
-    left: 16px;
+    color: white;
+    position: absolute;
+    width: 125px;
+    height: 10px;
+    left: 62.5px;
+    text-align: center;
+  }
+
+  .price {
+    position: absolute;
+    bottom: 14px;
+    color: white;
+    position: absolute;
+    width: 125px;
+    height: 0px;
+    left: 115.5px;
+    text-align: right;
   }
 }

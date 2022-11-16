@@ -38,8 +38,8 @@
             <% products.each do |prod| %>
               <div class="card-background">
                 <%= image_tag 'itunes.jpg' %>
-                <p><%= prod.name %></p>
-                <%# add container %>
+                <p class="category"><%= prod.category %></p>
+                <p class="price">$<%= prod.price %></p>
               </div>
             <% end %>
           </div>
