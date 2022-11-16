@@ -1,6 +1,5 @@
 // Specific CSS for your home-page
 .screen-container {
-  display:flexbox;
   justify-content: center;
   background: linear-gradient(lightgray, rgba(lightgray, 0.1))
 }
@@ -56,4 +55,15 @@
     left: 115.5px;
     text-align: right;
   }
+}
+
+.btm-screen {
+  // background-color: #007aff;
+  background: linear-gradient(235.63deg, rgb(84, 155, 239) 15.78%, rgb(91, 104, 223) 84.1%);;
+  height: 380px;
+  margin-top: 100px;
+}
+
+.test {
+  text-align: center;
 }
