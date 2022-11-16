@@ -25,7 +25,34 @@
   <h2>Trending Items</h2>
   <ol>
     <% @products.each do |product| %>
-      <li class=""><%= link_to product.name, product %></li>
+      <li class="d-none"><%= link_to product.name, product %></li>
     <% end %>
   </ol>
-</div>
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <% @products.each_slice(4).with_index do |products, index| %>
+        <div class="carousel-item <%= 'active' if index.zero? %>">
+          <div class="d-flex justify-content-between w-100">
+            <% products.each do |prod| %>
+              <div>
+                <%= image_tag 'itunes.jpg' %>
+                <p><%= prod.name %></p>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
