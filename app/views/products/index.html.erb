@@ -29,16 +29,17 @@
     <% end %>
   </ol>
 
-  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div id="carouselExampleControls" class="container carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
 
       <% @products.each_slice(4).with_index do |products, index| %>
         <div class="carousel-item <%= 'active' if index.zero? %>">
-          <div class="d-flex justify-content-between w-100">
+          <div class="d-flex justify-content-evenly w-100">
             <% products.each do |prod| %>
               <div class="card-background">
                 <%= image_tag 'itunes.jpg' %>
                 <p><%= prod.name %></p>
+                <%# add container %>
               </div>
             <% end %>
           </div>
