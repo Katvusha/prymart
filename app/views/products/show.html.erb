@@ -1,26 +1,31 @@
-<div class="d-flex justify-content-center p-5 m-3">
-  <nav class="navbar fixed-top navbar-light bg-light">
-    <div class="p-2"><a href="XXX" class="nav-link"><%= image_tag("logo.png", height:50, :class => "rounded-circle m-2") %></a></div>
-    <div class="d-flex justify-content-end p-3">
-      <a href="XXX" class="btn">Sign up</a>
-      <a href="..." class="btn btn-primary">Login</a>
-    </div>
-  </nav>
-</div>
-
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-12 col-lg-6">
+    <div class="container">
       <div class="row">
 
-        <div class="col-12 col-lg-8">
-          <%= image_tag("https://randomwordgenerator.com/img/picture-generator/silviu-beniamin-tofan-QHz_SqhdbiE-unsplash.jpg", :class => "img-fluid w-100") %>
+        <div class="col-12 col-lg-8 p-3">
+          <div class="d-flex justify-content-around shadow-lg p-3 mb-5 bg-white rounded">
+            <%= image_tag("https://picsum.photos/250/150", :class => "rounded") %>
+            <ul class="list-group list-group-flush">
+              <h1><%= @product.name %></h1>
+              <li class="list-group-item">Text 1</li>
+              <li class="list-group-item">Text 2</li>
+              <li class="list-group-item">Text 3</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="col-12 col-lg-4">
-          $<%= @product.price %>
+        <div class="col-12 col-lg-4 p-3">
+          <ul class="list-group shadow-lg p-3 mb-5 bg-white rounded">
+            <li class="list-group-item list-group-item-success">Price: $<%= @product.price %></li>
+            <li class="list-group-item">
+              <div class="d-grid gap-2">
+                <a href="somewhere" class="btn btn-primary" type="button">Place offer</a>
+              </div>
+            </li>
+            <li class="list-group-item">Shop securely...</li>
+          </ul>
         </div>
-
       </div>
     </div>
   </div>
