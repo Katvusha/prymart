@@ -4,7 +4,7 @@ class CreateProducts < ActiveRecord::Migration[7.0]
       t.string :name, null: false
       t.float :price, null: false
       t.string :content, null: false
-      # t.references :user, foreign_key: true, null: false
+      t.references :user, foreign_key: true
 
       t.timestamps
     end
