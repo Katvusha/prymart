@@ -36,7 +36,7 @@
         <div class="carousel-item <%= 'active' if index.zero? %>">
           <div class="d-flex justify-content-between w-100">
             <% products.each do |prod| %>
-              <div>
+              <div class="card-background">
                 <%= image_tag 'itunes.jpg' %>
                 <p><%= prod.name %></p>
               </div>
