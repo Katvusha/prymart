@@ -34,5 +34,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_16_043044) do
     t.datetime "updated_at", null: false
     t.string "email"
   end
-
+  add_foreign_key "offers", "products"
+  add_foreign_key "offers", "users"
 end
