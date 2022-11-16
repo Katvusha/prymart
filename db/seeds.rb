@@ -9,12 +9,23 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts %(Cleaning up database...)
 Product.destroy_all
+User.destroy_all
 puts %(Database cleaned!)
 
 10.times do
-  Product.create(
+  User.create(
+    name: Faker::Name.name
+    # email: Faker::Internet.email
+  )
+end
+puts %(Users created)
+
+10.times do
+  Product.create!(
     name: Faker::Company.name,
-    price: Faker::Number.decimal(l_digits: 2, r_digits: 2)
+    price: Faker::Number.decimal(l_digits: 2, r_digits: 2),
+    content: Faker::Alphanumeric.alpha(number: 16),
+    user: User.all.sample
   )
 end
 puts %(Products created)

@@ -1,1 +1,13 @@
 <h1>Hi. This is the "new" path for products.</h2>
+
+<%= simple_form_for(@product) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :content %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit %>
+<% end %>
+
+<br>
+
+<h6><%= link_to "Back", products_path, class: "btn btn-primary" %></h6>
