@@ -1,1 +1,15 @@
 // Specific CSS for your home-page
+.screen-container {
+  background-color: lightgray;
+  height: 400px;
+  display:flexbox;
+  justify-content: center;
+}
+
+.banner-image {
+  height: 300px;
+}
+
+.logo-image {
+  height: 105px;
+}
