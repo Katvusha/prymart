@@ -8,4 +8,5 @@ Rails.application.routes.draw do
     resources :offers
   end
   resources :offers, only: [:index]
+
 end
