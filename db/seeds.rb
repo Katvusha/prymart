@@ -33,3 +33,4 @@ puts %(Database cleaned!)
     puts "Product with id: #{product.id} has been created"
   end
 end
+
