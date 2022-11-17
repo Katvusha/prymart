@@ -15,7 +15,7 @@ puts %(Database cleaned!)
 16.times do
   new_user = User.create(
     email: Faker::Internet.email,
-    password: 123456
+    password: 123_456
   )
   new_user.save!
   puts "User with id: #{new_user.id} has been created"
@@ -33,4 +33,3 @@ puts %(Database cleaned!)
     puts "Product with id: #{product.id} has been created"
   end
 end
-
