@@ -21,10 +21,24 @@ puts %(Database cleaned!)
   puts "User with id: #{new_user.id} has been created"
 
   16.times do
+    category = ['Apple iTunes', 'Steam Wallet', 'Blizzard'].sample
+    prefixes = {
+      'Apple iTunes': [
+
+      ],
+      'Steam Wallet': [
+
+      ], '
+      Blizzard': [
+
+      ]
+    }
+
+    prefix = prefixes[category.to_sym].sample
     product = Product.create!(
-      name: Faker::Company.name,
+      name: Faker::Company.name + " " + prefix,
       price: Faker::Number.decimal(l_digits: 2, r_digits: 2),
-      category: ['Apple iTunes', 'Steam Wallet', 'Blizzard'].sample,
+      category: category,
       content: Faker::Alphanumeric.alpha(number: 16),
       user: User.all.sample
     )
