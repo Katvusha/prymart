@@ -15,7 +15,7 @@ puts %(Database cleaned!)
 10.times do
   new_user = User.create(
     email: Faker::Internet.email,
-    password: 123456
+    password: 12345678
     # email: Faker::Internet.email
   )
   new_user.save!
