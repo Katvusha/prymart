@@ -24,7 +24,6 @@ class OffersController < ApplicationController
   end
 
   def update
-    pp params[:commit].downcase.to_sym
     @offer = Offer.find(params[:id])
     if ['Accepted', 'Rejected'].include?(params[:commit])
       @offer.status = params[:commit].downcase.to_sym
@@ -33,6 +32,8 @@ class OffersController < ApplicationController
       else
         redirect_to root_path
       end
+    else
+      redirect_to root_path
     end
   end
 
