@@ -13,9 +13,13 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.create(product_params)
+    # TODO: use devise to allocate user
+    @product.user = User.last
+
     if @product.save
-      redirect_to products_path(@product)
+      redirect_to @product
     else
+      pp @product.errors.full_messages
       render :new, status: :unprocessable_entity
     end
   end
