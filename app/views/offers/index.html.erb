@@ -15,52 +15,24 @@
             <th colspan="5">Product</th>
             <th colspan="5">Status</th>
             <th colspan="5">Price</th>
+            <th colspan="5"></th>
           </tr>
         </thead>
 
         <tbody>
-          <tr>
-            <td colspan="5">1</td>
-            <td colspan="5">iTunes Gift Card USD 100</td>
-            <td colspan="5">Completed</td>
-            <td colspan="5">SGD 140.66</td>
-          </tr>
-
-        <tr>
-          <td colspan="5">2</td>
-          <td colspan="5">iTunes Gift Card USD 50</td>
-          <td colspan="5">Pending</td>
-          <td colspan="5">SGD 71.75</td>
-        </tr>
-
-        <tr>
-          <td colspan="5">3</td>
-          <td colspan="5">iTunes Gift Card USD 25</td>
-          <td colspan="5">Pending</td>
-          <td colspan="5">SGD 31.77</td>
-        </tr>
-
-        <tr>
-          <td colspan="5">4</td>
-          <td colspan="5">iTunes Gift Card USD 25</td>
-          <td colspan="5">Pending</td>
-          <td colspan="5">SGD 31.77</td>
-        </tr>
-
-        <tr>
-          <td colspan="5">5</td>
-          <td colspan="5">iTunes Gift Card USD 10</td>
-          <td colspan="5">Pending</td>
-          <td colspan="5">SGD 14.76</td>
-        </tr>
-
-        <tr>
-          <td colspan="5">6</td>
-          <td colspan="5">iTunes Gift Card USD 10</td>
-          <td colspan="5">Pending</td>
-          <td colspan="5">SGD 14.76</td>
-        </tr>
-
+          <% @offers.each do | offer | %>
+            <tr>
+              <td colspan="5"><%=offer.id %></td>
+              <td colspan="5"><%=offer.product.name %></td>
+              <td colspan="5"><%=offer.status %></td>
+              <td colspan="5">
+                <%= form_for(offer) do |f| %>
+                    <%= f.submit 'Accepted' %>
+                    <%= f.submit 'Rejected' %>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
       </tbody>
       </table>
     <br><br>

@@ -1,6 +1,8 @@
 class OffersController < ApplicationController
   def index
     redirect_to root_path unless current_user
+
+    @offers = Offer.all
   end
 
   def new
@@ -23,13 +25,19 @@ class OffersController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if params[:commit] == 'Accepted'
-        'accepted'
-      elsif params[:commit] == 'Rejected'
-        'rejected'
+    @offer = Offer.find(params[:id])
+    if ['Accepted', 'Rejected'].include?(params[:commit])
+      @offer.status = params[:commit].downcase.to_sym
+      if @offer.save
+        redirect_to product_offers_path(@offer.product_id)
+      else
+        redirect_to root_path
+      end
+    else
+      redirect_to root_path
     end
   end
+
   private
 
   def offer_params
