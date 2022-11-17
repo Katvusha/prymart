@@ -4,14 +4,55 @@
       <div class="row">
 
         <div class="col-12 col-lg-8 p-3">
-          <div class="d-flex justify-content-around shadow-lg p-3 mb-5 bg-white rounded">
-            <%= image_tag("itunes.jpg", :class => "rounded") %>
-            <ul class="list-group list-group-flush">
-              <h1><%= @product.name %></h1>
-              <li class="list-group-item">Offer ID</li>
-              <li class="list-group-item">Can't activate</li>
-              <li class="list-group-item">Delivery method</li>
-            </ul>
+          <div class="d-flex justify-content-between shadow-lg p-3 mb-5 bg-white rounded">
+            <div class="align-self-center p-2">
+              <%= image_tag("itunes.jpg", :class => "rounded-3") %>
+            </div>
+            <div class="flex-grow-1 p-2">
+              <ul class="list-group list-group-flush">
+
+                <li class="list-group-item">
+                  <h1><%= @product.name %></h1>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <div>100% (55 sold)</div>
+                    <div>Other sellers</div>
+                  </div>
+                </li>
+
+                <li class="list-group-item bg-light">
+                  <div class="d-flex justify-content-between">
+                    <div class="align-self-center">Seller Icon</div>
+                    <button type="button" class="btn btn-outline-success">Chat</button>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <div>Offer ID</div>
+                    <div>G1655647021942AF</div>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <div>Can't activate in</div>
+                    <div>Singapore</div>
+                    <div>Check other countries</div>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <div>Delivery Method</div>
+                    <div>Auto-delivery</div>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -42,14 +83,14 @@
             <li class="list-group-item">
               <div class="d-flex">
                 <div class="p-2 align-self-center">+</div>
-                <div class="p-2 flex-grow-1 shadow-lg p-2 m-2 bg-white rounded text-center">1</div>
+                <div class="p-2 flex-grow-1 shadow-lg p-2 m-2 bg-white rounded-3 text-center">1</div>
                 <div class="p-2 align-self-center">-</div>
               </div>
             </li>
 
             <li class="list-group-item">
               <div class="d-flex justify-content-between">
-                <div>Price</div>
+                <div class="align-self-center">Price</div>
                 <div class="d-inline-flex"><h3><%= @product.price %></h3><div>SGD</div></div>
               </div>
             </li>
@@ -68,49 +109,6 @@
   </div>
 </div>
 
-
-
-
-<div class="container">
-  <div class="row"><%= @product.name %></div>
-  <div class="row">$<%= @product.price %></div>
-  <div class="row"><%= @product.name %></div>
-  <div class="row">$<%= @product.price %></div>
-  <div class="row"><%= @product.name %></div>
-  <div class="row">$<%= @product.price %></div>
-  <div class="row"><%= @product.name %></div>
-  <div class="row">$<%= @product.price %></div>
-  <div class="row"><%= @product.name %></div>
-  <div class="row">$<%= @product.price %></div>
-  <div class="row"><%= @product.name %></div>
-  <div class="row">$<%= @product.price %></div>
-  <div class="row"><%= @product.name %></div>
-  <div class="row">$<%= @product.price %></div>
-  <div class="row"><%= @product.name %></div>
-  <div class="row">$<%= @product.price %></div>
-  <div class="row"><%= @product.name %></div>
-  <div class="row">$<%= @product.price %></div>
-  <div class="row"><%= @product.name %></div>
-  <div class="row">$<%= @product.price %></div>
-  <div class="row"><%= @product.name %></div>
-  <div class="row">$<%= @product.price %></div>
-  <div class="row"><%= @product.name %></div>
-  <div class="row">$<%= @product.price %></div>
-  <div class="row"><%= @product.name %></div>
-  <div class="row">$<%= @product.price %></div>
-  <div class="row"><%= @product.name %></div>
-  <div class="row">$<%= @product.price %></div>
-  <div class="row"><%= @product.name %></div>
-  <div class="row">$<%= @product.price %></div>
-  <div class="row"><%= @product.name %></div>
-  <div class="row">$<%= @product.price %></div>
+<div class="g-screen-container bg-white">
+  <h2 class="text-center">Other Sellers (0)</h2>
 </div>
-
-
-<br>
-<br>
-<br>
-<h1>Hi. This is the "show" path for products.</h2>
-
-<%# Card for Sale: <%= @product.name %> %>
-<%# <%= @product.price %> %>
