@@ -12,6 +12,10 @@ Product.destroy_all
 User.destroy_all
 puts %(Database cleaned!)
 
+10.times do
+  User.create(
+    email: Faker::Internet.email,
+    password: 123456
 16.times do
   new_user = User.create(
     name: Faker::Name.name
