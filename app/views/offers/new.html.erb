@@ -10,7 +10,6 @@
         <%= simple_form_for(@offer) do |f| %>
           <%= f.association :product %>
           <%= f.input :status, collection: Offer::STATUSES %>
-
           <%= f.submit %>
         <% end %>
 

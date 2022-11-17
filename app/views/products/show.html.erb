@@ -55,9 +55,11 @@
             </li>
 
             <li class="list-group-item">
-              <div class="d-grid gap-2">
-                <button type="button" class="p-2 mb-2 bg-danger text-white">Buy now</button>
-              </div>
+                <%= simple_form_for([@product, @offer]) do |f| %>
+                <div class="d-grid gap-2">
+                  <%= f.submit "Order", class: "p-2 mb-2 bg-danger text-white" %>
+                </div>
+                <%end%>
             </li>
 
             <li class="list-group-item">Shop securely with GamerProtect</li>

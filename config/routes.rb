@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources :products do
     resources :offers, only: %i[new create]
   end
+
   resources :offers, only: [:index, :edit, :update]
 end
