@@ -7,13 +7,14 @@ class OffersController < ApplicationController
   def create
     @product = Product.find(params[:product_id])
 
-    @offer = Offer.new(offer_params)
+    @offer = Offer.new
+    @offer.user = current_user
     @offer.product = @product
     @offer.status = :pending
     if @offer.save
-      redirect_to product_path(@product)
+      redirect_to root_path
     else
-      render :new, status: :unprocessable_entity
+      render 'products/show', status: :unprocessable_entity
     end
   end
 
