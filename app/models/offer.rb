@@ -3,7 +3,6 @@ class Offer < ApplicationRecord
 
   belongs_to :product
   belongs_to :user
-  
-  scope :is, ->(status) { where(status:) }
 
+  scope :is, ->(status) { where(status:) }
 end

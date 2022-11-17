@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   resources :products do
     resources :offers
   end
-  resources :offers, only: [:index]
 
+  resources :offers, only: [:index]
 end
