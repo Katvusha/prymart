@@ -6,4 +6,13 @@ class OffersController < ApplicationController
   def new
     @offer = Offer.new
   end
+
+  def update
+    respond_to do |format|
+      if params[:commit] == 'Accepted'
+        'accepted'
+    elsif params[:commit] == 'Rejected'
+        'rejected'
+    end
+  end
 end
