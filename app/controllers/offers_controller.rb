@@ -26,7 +26,7 @@ class OffersController < ApplicationController
 
   def update
     @offer = Offer.find(params[:id])
-    if ['Accepted', 'Rejected'].include?(params[:commit])
+    if statuses.include?(params[:commit])
       @offer.status = params[:commit].downcase.to_sym
       if @offer.save
         redirect_to product_offers_path(@offer.product_id)
@@ -42,5 +42,9 @@ class OffersController < ApplicationController
 
   def offer_params
     params.require(:offer).permit(:status)
+  end
+
+  def statuses
+    ['Accepted', 'Rejected']
   end
 end

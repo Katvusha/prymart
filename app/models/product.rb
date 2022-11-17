@@ -5,5 +5,11 @@ class Product < ApplicationRecord
 
   validates :name, presence: true
   validates :price, presence: true
-  validates :content, presence: true
+
+
+  def card_image
+    { 'Apple iTunes': "itunes.jpg",
+      'Steam Wallet': "steam.jpg",
+      'Blizzard': "battlenet.jpg" }[category.to_sym]
+  end
 end
