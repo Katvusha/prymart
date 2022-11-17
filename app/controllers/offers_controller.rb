@@ -1,12 +1,26 @@
 class OffersController < ApplicationController
   def index
-    @offers = Offer.all
+    redirect_to root_path unless current_user
   end
 
   def new
+    @product = Product.find(params[:product_id])
     @offer = Offer.new
   end
 
+  def create
+    @product = Product.find(params[:product_id])
+
+    @offer = Offer.new(offer_params)
+    @offer.product = @product
+    @offer.status = :pending
+    if @offer.save
+      redirect_to product_path(@product)
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+  
   def update
     respond_to do |format|
       if params[:commit] == 'Accepted'
@@ -14,5 +28,11 @@ class OffersController < ApplicationController
     elsif params[:commit] == 'Rejected'
         'rejected'
     end
+  end
+    
+  private
+
+  def offer_params
+    params.require(:offer).permit(:status)
   end
 end
