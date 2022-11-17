@@ -12,15 +12,16 @@ Product.destroy_all
 User.destroy_all
 puts %(Database cleaned!)
 
-16.times do
+10.times do
   new_user = User.create(
-    name: Faker::Name.name
+    email: Faker::Internet.email,
+    password: 123456
     # email: Faker::Internet.email
   )
   new_user.save!
   puts "User with id: #{new_user.id} has been created"
 
-  16.times do
+  10.times do
     product = Product.create!(
       name: Faker::Company.name,
       price: Faker::Number.decimal(l_digits: 2, r_digits: 2),
