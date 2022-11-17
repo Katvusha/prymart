@@ -1,32 +1,31 @@
-<div>
-  <div id="navbar">
-    <%= image_tag("logo.png", height:105, :class => "icon-image") %>
-    <div class="search-container">
-      <form action="/index">
-        <input type="text" placeholder="Search" name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
-    </div>
-  </div>
-  <div class="screen-container items-center">
-    <div class="text-weight-bold" style="line-height: 1; font-size: 48px;">
-          The Lich King returns!
-    </div>
-    <div class="text-h6 q-mt-lg">
-          WOW Classic Gold
-    </div>
-    <div>
-      <button type="button" class="btn btn-outline-secondary">Buy now</button>
-    </div>
-    <%= image_tag("wowlogo.png", height:300, :class => "banner-image") %>
-  </div>
-  <div>
-    <h1>Trending Items</h1>
-      <ol>
-      <% @products.each do |product| %>
-        <li><%= link_to product.name, product %></li>
-      <% end %>
-      </ol>
-  </div>
+<div class="screen-container">
 
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+
+        <!-- Left content -->
+        <div>
+          <h1><strong>The Lich King returns!</strong></h1>
+          <p>WOW Classic Gold</p>
+          <a href="#" type="button" class="btn btn-outline-secondary">Buy now</a>
+        </div>
+
+      </div>
+      <div class="col-md-4">
+
+        <!-- Right content -->
+        <%= image_tag 'wowlogo.png', height: 300, :class => "bannerlogo" %>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="trend-items">
+  <h2>Trending Items</h2>
+  <ol>
+    <% @products.each do |product| %>
+      <li class=""><%= link_to product.name, product %></li>
+    <% end %>
+  </ol>
 </div>
