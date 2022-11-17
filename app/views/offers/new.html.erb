@@ -1,4 +1,23 @@
-<%= simple_form_for(@offer) do |f| %>
-  <%= f.input :status, collection: Offer::STATUSES %>
-<% end %>
 
+<div style="background-image: linear-gradient(rgba(150,0,0,0.1),rgba(150,0,0,0.1)), url(https://res.cloudinary.com/dzjwppn5k/image/upload/v1668649308/green-ambient-bg_coebud.jpg);width: 100vw; height: 100vh; background-size: fill; opacity: 0.5">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 mx-auto">
+      <br>
+      <br>
+      <br>
+
+        <%= simple_form_for(@offer) do |f| %>
+          <%= f.association :product %>
+          <%= f.input :status, collection: Offer::STATUSES %>
+
+          <%= f.submit %>
+        <% end %>
+
+        <br>
+
+        <h6><%= link_to "Back", products_path, class: "btn btn-primary" %></h6>
+      </div>
+    </div>
+  </div>
+</div>

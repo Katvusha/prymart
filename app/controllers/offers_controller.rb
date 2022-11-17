@@ -13,7 +13,7 @@ class OffersController < ApplicationController
 
     @offer = Offer.new(offer_params)
     @offer.product = @product
-
+    @offer.status = :pending
     if @offer.save
       redirect_to product_path(@product)
     else
