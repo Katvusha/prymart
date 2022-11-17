@@ -21,19 +21,19 @@ class OffersController < ApplicationController
       render 'products/show', status: :unprocessable_entity
     end
   end
-  
+
   def update
     respond_to do |format|
       if params[:commit] == 'Accepted'
         'accepted'
-    elsif params[:commit] == 'Rejected'
+      elsif params[:commit] == 'Rejected'
         'rejected'
     end
   end
-    
   private
 
   def offer_params
     params.require(:offer).permit(:status)
+  end
   end
 end
