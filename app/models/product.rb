@@ -3,7 +3,7 @@ class Product < ApplicationRecord
   has_many :offers
   has_one_attached :photo
 
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true
   validates :price, presence: true
-  validates :content, presence: true, uniqueness: true
+  validates :content, presence: true
 end
