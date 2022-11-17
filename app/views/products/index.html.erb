@@ -1,1 +1,84 @@
-<h1>Hi. This is the "index" path for products.</h2>
+<div class="screen-container">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-8">
+
+        <!-- Left content -->
+        <div>
+          <h1><strong>The Lich King returns!</strong></h1>
+          <p>WOW Classic Gold</p>
+          <a href="#" type="button" class="btn btn-outline-secondary">Buy now</a>
+        </div>
+
+      </div>
+      <div class="col-4">
+
+        <!-- Right content -->
+        <%= image_tag 'wowlogo.png', height: 300, :class => "bannerlogo" %>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="trend-items">
+  <h2>Trending Items</h2>
+  <ol>
+    <% @products.each do |product| %>
+      <li class="d-none"><%= link_to product.name, product %></li>
+    <% end %>
+  </ol>
+
+  <div id="carouselExampleControls" class="container carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <% @products.each_slice(4).with_index do |products, index| %>
+        <div class="carousel-item <%= 'active' if index.zero? %>">
+          <div class="d-flex justify-content-evenly w-100">
+            <% products.each do |prod| %>
+              <%= link_to(prod) do %>
+                <div class="card-background">
+                  <%= image_tag('itunes.jpg') %>
+                  <p class="category"><%= prod.category %></p>
+                  <p class="price">$<%= prod.price %></p>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<div class="btm-screen">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <div><h1>TEST 1</h1></div>
+      <div><h1>TEST 2</h1></div>
+      <div><h1>TEST 3</h1></div>
+
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
+</div>
