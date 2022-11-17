@@ -28,11 +28,10 @@ puts %(Database cleaned!)
       content: Faker::Alphanumeric.alpha(number: 16),
       user: User.all.sample
     )
-    product.restaurant = new_restaurant
+    product.user = new_user
     product.save!
     puts "Product with id: #{product.id} has been created"
   end
-
 end
 # puts %(Users created)
 
