@@ -1,9 +1,11 @@
 // Specific CSS for your home-page
 .screen-container {
   justify-content: center;
-  background: linear-gradient(lightgray, rgba(lightgray, 0.1))
+  //background: linear-gradient(lightgray, rgba(lightgray, 0.1))
+  background-image: linear-gradient(rgba(150,0,0,0.1),rgba(150,0,0,0.1)), url(https://res.cloudinary.com/dzjwppn5k/image/upload/v1668649308/green-ambient-bg_coebud.jpg);
 }
 
+//style="background-image: linear-gradient(rgba(150,0,0,0.1),rgba(150,0,0,0.1)), url(https://res.cloudinary.com/dzjwppn5k/image/upload/v1668649308/green-ambient-bg_coebud.jpg);width: 100vw; height: 100vh; background-size: fill; opacity: 0.5"
 .bannerlogo {
   margin-top: 50px;
   margin-bottom: 50px;
