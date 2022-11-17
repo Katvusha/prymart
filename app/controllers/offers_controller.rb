@@ -43,5 +43,4 @@ class OffersController < ApplicationController
   def offer_params
     params.require(:offer).permit(:status)
   end
-  end
 end
