@@ -8,15 +8,12 @@
         <h4>List it yourself</h4>
         <h5>Find your own buyers</h5>
       <br>
-
         <%= simple_form_for(@product) do |f| %>
           <%= f.input :name %>
           <%= f.input :price %>
           <%= f.input :category %>
-          <%= f.input :photo, as: :file %>
           <%= f.submit %>
         <% end %>
-
         <br>
 
         <h6><%= link_to "Back", products_path, class: "btn btn-primary" %></h6>
