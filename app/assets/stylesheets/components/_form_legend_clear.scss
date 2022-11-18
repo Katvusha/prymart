@@ -8,3 +8,23 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+.form-control {
+  width: 100%;
+  margin: 0 auto;
+}
+.devise-links{
+  padding-top: 0px;
+  color: black;
+  text-align: center;
+  font-size: 1em;
+}
+.devise-links a{
+  padding-top: 0px;
+  color: black;
+  text-align: match-parent;
+  font-size: 1em;
+}
+.text-input-label {
+  width: 80%;
+}

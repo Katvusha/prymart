@@ -12,17 +12,12 @@
 
   <body>
 
-  <%= render "shared/navbar" %>
-  <%= render "shared/flashes" %>
+    <%= render "shared/flashes" %>
+    <%= render "shared/navbar" %>
 
-  <% if notice %>
-    <p class="notice"><%= notice %></p>
-  <% end %>
+    <div style="margin-top: 76px">
+      <%= yield %>
+    </div>
 
-  <% if alert %>
-    <p class="alert"><%= alert %></p>
-  <% end %>
-
-    <%= yield %>
   </body>
 </html>
