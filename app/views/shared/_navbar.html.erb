@@ -1,6 +1,6 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon shadow-sm bg-white rounded">
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+<div class="navcon navbar navbar-expand-sm navbar-light navbar-lewagon shadow-sm bg-white rounded">
+  <div class="container">
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag("logo.png", :class => "mr-5 h-2 w-2") %>
       Prymart
     <% end %>
@@ -12,7 +12,7 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Home", root_path, class: "nav-link" %>
+            <%= link_to "Sell at Prymart", new_product_path, class: "btn-red btn btn-danger" %>
           </li>
           <li class="nav-item">
             <%= link_to "Messages", "#", class: "nav-link" %>
