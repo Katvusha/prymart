@@ -3,114 +3,129 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-12 col-lg-8 p-3">
-          <div class="d-flex justify-content-between shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="col-12 col-lg-9 p-3">
+          <div class="d-flex justify-content-between bg-white p-3 border g-border-light border-1" style="border-radius: 15px">
             <div class="align-self-center p-2">
-              <%= image_tag("itunes.jpg", :class => "rounded-3") %>
+              <%= image_tag("itunes.jpg", :style => "border-radius: 5px") %>
             </div>
             <div class="flex-grow-1 p-2">
-              <ul class="list-group list-group-flush">
+              <small>
+                <ul class="list-group list-group-flush">
 
-                <li class="list-group-item">
-                  <h1><%= @product.name %></h1>
-                </li>
+                  <li class="list-group-item px-0 border-bottom-0">
+                    <h2 class="fw-bold"><%= @product.name %></h2>
+                  </li>
 
-                <li class="list-group-item">
-                  <div class="d-flex justify-content-between">
-                    <div>100% (55 sold)</div>
-                    <div>Other sellers</div>
-                  </div>
-                </li>
+                  <li class="list-group-item px-0 border-bottom-0">
+                    <div class="d-flex justify-content-between">
+                      <div style="color: rgb(29, 194, 73)">🖒 100.00% <span class="text-dark">(55 sold)</span></div>
+                      <div class="text-danger">Other sellers (0)</div>
+                    </div>
+                  </li>
 
-                <li class="list-group-item bg-light">
-                  <div class="d-flex justify-content-between">
-                    <div class="align-self-center">Seller Icon</div>
-                    <button type="button" class="btn btn-outline-success">Chat</button>
-                  </div>
-                </li>
+                  <li class="list-group-item bg-light border-bottom-0 my-1" style="border-radius: 10px">
+                    <div class="d-flex justify-content-between">
+                      <div class="align-self-center">Seller Icon</div>
+                      <button type="button" class="btn btn-outline-secondary"><p class="m-0">🗭 Chat</p></button>
+                    </div>
+                  </li>
 
-                <li class="list-group-item">
-                  <div class="d-flex justify-content-between">
-                    <div>Offer ID</div>
-                    <div>G1655647021942AF</div>
-                  </div>
-                </li>
+                  <li class="list-group-item px-0 mt-0">
+                    <div class="d-flex">
+                      <div class="col-4 text-muted">Offer ID</div>
+                      <div class="col-4">G1655647021942AF</div>
+                      <div class="col-4 text-end"></div>
+                    </div>
+                  </li>
 
-                <li class="list-group-item">
-                  <div class="d-flex justify-content-between">
-                    <div>Can't activate in</div>
-                    <div>Singapore</div>
-                    <div>Check other countries</div>
-                  </div>
-                </li>
+                  <li class="list-group-item px-0">
+                    <div class="d-flex">
+                      <div class="col-4 text-danger">Can't activate in</div>
+                      <div class="col-4">Singapore</div>
+                      <div class="col-4 text-danger d-flex justify-content-end">Check other countries</div>
+                    </div>
+                  </li>
 
-                <li class="list-group-item">
-                  <div class="d-flex justify-content-between">
-                    <div>Delivery Method</div>
-                    <div>Auto-delivery</div>
-                  </div>
-                </li>
+                  <li class="list-group-item px-0">
+                    <div class="d-flex">
+                      <div class="col-4 text-muted">Delivery method</div>
+                      <div class="col-4">⏱ Auto delivery</div>
+                      <div class="col-4"></div>
+                    </div>
+                  </li>
 
-              </ul>
+                </ul>
+              </small>
             </div>
           </div>
         </div>
 
-        <div class="col-12 col-lg-4 p-3">
-          <ul class="list-group shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="col-12 col-lg-3 p-3">
+          <small>
+            <ul class="list-group border g-border-light border-1 bg-white" style="border-radius: 15px">
 
-            <li class="list-group-item bg-success text-white">
-              <div class="d-flex justify-content-between">
-                <div class="align-self-center">Unit Price</div>
-                <div class="d-inline-flex align-items-center"><h3><%= @product.price %></h3><p>SGD</p></div>
-              </div>
-            </li>
-
-            <li class="list-group-item">
-              <div class="d-flex justify-content-between">
-                <div>Delivery speed</div>
-                <div>Instant</div>
-              </div>
-            </li>
-
-            <li class="list-group-item">
-              <div class="d-flex justify-content-between">
-                <div>Stock</div>
-                <div>4</div>
-              </div>
-            </li>
-
-            <li class="list-group-item">
-              <div class="d-flex">
-                <div class="p-2 align-self-center">+</div>
-                <div class="p-2 flex-grow-1 shadow-lg p-2 m-2 bg-white rounded-3 text-center">1</div>
-                <div class="p-2 align-self-center">-</div>
-              </div>
-            </li>
-
-            <li class="list-group-item">
-              <div class="d-flex justify-content-between">
-                <div class="align-self-center">Price</div>
-                <div class="d-inline-flex"><h3><%= @product.price %></h3><div>SGD</div></div>
-              </div>
-            </li>
-
-            <li class="list-group-item">
-                <%= simple_form_for([@product, @offer]) do |f| %>
-                <div class="d-grid gap-2">
-                  <%= f.submit "Order", class: "p-2 mb-2 bg-danger text-white" %>
+              <li class="list-group-item text-white" style="background: rgb(19, 202, 168)">
+                <div class="d-flex justify-content-between">
+                  <div class="align-self-center">Unit Price</div>
+                  <div><h3 class="fw-bold m-0"><%= @product.price %><span class="fs-6 fw-light m-0"> SGD</span></h3></div>
                 </div>
-                <%end%>
-            </li>
+              </li>
 
-            <li class="list-group-item">Shop securely with GamerProtect</li>
-          </ul>
+              <li class="list-group-item border-bottom-0">
+                <div class="d-flex justify-content-between">
+                  <div class="text-muted">Delivery speed</div>
+                  <div>Instant</div>
+                </div>
+              </li>
+
+              <li class="list-group-item">
+                <div class="d-flex justify-content-between">
+                  <div class="text-muted">Stock</div>
+                  <div>4</div>
+                </div>
+              </li>
+
+              <li class="list-group-item border-bottom-0">
+                <div class="d-flex px-2 fs-5">
+                  <div class="p-2 text-end align-self-center">-</div>
+                  <div class="p-2 flex-grow-1 shadow p-2 m-2 bg-white text-center" style="border-radius: 15px">1</div>
+                  <div class="p-2 align-self-center">+</div>
+                </div>
+              </li>
+
+              <li class="list-group-item bg-light border-top-0 border-bottom-0">
+                <div class="d-flex justify-content-between">
+                  <div class="align-self-center text-muted">Price</div>
+                  <div><h3 class="fw-bold m-0"><%= @product.price %><span class="fs-6 fw-light m-0"> SGD</span></h3></div>
+                </div>
+              </li>
+
+              <li class="list-group-item border-bottom-0">
+                  <%= simple_form_for([@product, @offer]) do |f| %>
+                  <div class="d-grid gap-2">
+                    <%= f.submit "Order", class: "p-3 m-2 btn btn-danger text-white", style: "border-radius: 5px" %>
+                  </div>
+                  <%end%>
+              </li>
+
+              <li class="list-group-item border-top-0">
+                <div class="d-inline-flex m-0">
+                  <div class="align-self-center"><%= image_tag("wowlogo.png", :class => "w-100", :style => "border-radius: 50%") %></div>
+                  <div class="col-10 px-2 justify-content-start">
+                    <h6 class="m-0">Shop securely with</h6>
+                    <h6 class="fw-bold m-0">GamerProtect</h6>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </small>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="g-screen-container bg-white">
+<div class="g-screen-container bg-white mt-5 py-5">
   <h2 class="text-center">Other Sellers (0)</h2>
 </div>
