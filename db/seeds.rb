@@ -26,7 +26,7 @@ puts %(Database cleaned!)
     product = Product.create!(
       name: ["Gift Card USD 15", "Gift Card USD 20", "Gift Card USD 25", "Gift Card USD 30", "Gift Card USD 35", "Gift Card USD 40", "Gift Card USD 50", "Gift Card USD 70", "Gift Card USD 100", "Gift Card USD 150", "Gift Card USD 200", "Gift Card USD 250", "Gift Card USD 500"].sample,
       price: Faker::Number.decimal(l_digits: 2, r_digits: 2),
-      category: Category.last,
+      subcategory: Subcategory.all.sample,
       quantity: rand(50..200),
       user: new_user
     )

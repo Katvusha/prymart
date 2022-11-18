@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   def index
+    @products = Product.all
     if params[:query].present?
       # @products = Product.where(name: params[:query])
       @products = Product.search_by_name_and_category(params[:query])
@@ -33,6 +34,6 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :price, :content, :photo, :category)
+    params.require(:product).permit(:name, :price, :photo, :category)
   end
 end

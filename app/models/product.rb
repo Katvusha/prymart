@@ -3,8 +3,8 @@ class Product < ApplicationRecord
 
   belongs_to :user
   has_many :offers
-  belongs_to :category
-  has_many :subcategories, through: :category, source: :subcategories
+  belongs_to :subcategory
+  has_many :categories, through: :subcategory, source: :categories
   has_one_attached :photo
 
   validates :name, presence: true
@@ -17,6 +17,6 @@ class Product < ApplicationRecord
   def card_image
     { 'Apple iTunes' => "itunes.jpg",
       'Steam Wallet' => "steam.jpg",
-      'Blizzard' => "battlenet.jpg" }[name]
+      'Blizzard' => "battlenet.jpg" }[category.subcategories]
   end
 end
