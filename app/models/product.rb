@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
   belongs_to :user
   has_many :offers
+  has_many :subcategories
   has_one_attached :photo
 
   validates :name, presence: true
