@@ -12,6 +12,7 @@ class Product < ApplicationRecord
                   against: %i[name category],
                   using: { tsearch: { prefix: true } }
 
+
   def card_image
     { 'Apple iTunes': "itunes.jpg",
       'Steam Wallet': "steam.jpg",
