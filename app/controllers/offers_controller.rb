@@ -1,7 +1,7 @@
 class OffersController < ApplicationController
-  def index
-    redirect_to root_path unless current_user
+  before_action :authenticate
 
+  def index
     @offers = Offer.all
   end
 
@@ -46,5 +46,9 @@ class OffersController < ApplicationController
 
   def statuses
     ['Accepted', 'Rejected']
+  end
+
+  def authenticate
+    redirect_to new_user_session_path unless current_user
   end
 end

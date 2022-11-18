@@ -9,10 +9,9 @@ class Product < ApplicationRecord
   validates :price, presence: true
 
   pg_search_scope :search_by_name_and_category,
-    against: [ :name, :category ],
-    using: {
-      tsearch: { prefix: true }
-    }
+                  against: %i[name category],
+                  using: { tsearch: { prefix: true } }
+
 
   def card_image
     { 'Apple iTunes': "itunes.jpg",
