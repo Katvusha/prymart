@@ -77,7 +77,7 @@
               <%= link_to(prod) do %>
                 <div class="card-background">
                   <%= image_tag(prod.card_image) %>
-                  <p class="category"><%= prod.category.subcategories %></p>
+                  <p class="category"><%= prod.subcategory.name %></p>
                   <p class="price">$<%= prod.price %></p>
                 </div>
               <% end %>
