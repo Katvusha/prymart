@@ -24,22 +24,21 @@
                   input_html: { autocomplete: "new-password" } %>
       </div>
 
-
       <div class="mb-3" style="margin: 0 2rem">
       <%= f.input :password_confirmation,
                   required: true,
                   input_html: { autocomplete: "new-password" } %>
       </div>
 
-      <div class="form-actions" style="margin: 0 2rem">
-        <%= f.button :submit, "Sign up" %>
-      </div>
-
   <div class="gravatar_edit">
       <%= f.file_field :avatar, placeholder: 'Upload picture',direct_upload: true%>
   </div>
-
+      <div class="form-actions" style="margin: 0 2rem">
+        <%= f.button :submit, "Sign up" %>
+      </div>
 <% end %>
+
+
 
     <div class="text-input-label devise-links" style="margin: 0 2rem">
       <%= render "devise/shared/links" %>
