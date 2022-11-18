@@ -23,10 +23,16 @@
                 input_html: { autocomplete: "current-password" } %>
   </div>
 
+  <div class="gravatar_edit">
+    <%= f.file_field :avatar, placeholder: 'Upload picture',direct_upload: true%>
+  </div>
+
   <div class="form-actions">
     <%= f.button :submit, "Update" %>
   </div>
 <% end %>
+
+
 
 <h3>Cancel my account</h3>
 
