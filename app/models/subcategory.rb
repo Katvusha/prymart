@@ -1,4 +1,4 @@
 class Subcategory < ApplicationRecord
   belongs_to :category
-  has_and_belongs_to_many :products
+  has_many :products, through: :category
 end
