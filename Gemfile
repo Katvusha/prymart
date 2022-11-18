@@ -47,6 +47,8 @@ gem "sassc-rails"
 
 gem 'devise'
 
+gem "pg_search"
+
 gem "cloudinary"
 
 gem 'faker'
