@@ -17,6 +17,6 @@ class Product < ApplicationRecord
   def card_image
     { 'Apple iTunes' => "itunes.jpg",
       'Steam Wallet' => "steam.jpg",
-      'Blizzard' => "battlenet.jpg" }[category.subcategories]
+      'Blizzard' => "battlenet.jpg" }[subcategory.name]
   end
 end
