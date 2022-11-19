@@ -75,7 +75,6 @@
 
   <div id="carouselExampleControls" class="container carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-
       <% @products.each_slice(4).with_index do |products, index| %>
         <div class="carousel-item <%= 'active' if index.zero? %>">
           <div class="d-flex justify-content-evenly w-100">

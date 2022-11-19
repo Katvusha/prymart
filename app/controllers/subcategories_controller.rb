@@ -4,6 +4,7 @@ class SubcategoriesController < ApplicationController
   end
 
   def show
-    @Subcategory = Subcategory.find(params[:id])
+    @subcategory = Subcategory.find(params[:id])
+    @products = @subcategory.products
   end
 end

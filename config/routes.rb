@@ -10,5 +10,7 @@ Rails.application.routes.draw do
 
   resources :offers, only: %i[index edit update]
 
-  resources :subcategories, only: %i[index show]
+  resources :subcategories do
+    resources :products
+  end
 end

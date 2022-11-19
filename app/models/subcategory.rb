@@ -7,6 +7,13 @@ class Subcategory < ApplicationRecord
       'Steam Wallet' => "steam.jpg",
       'Blizzard' => "battlenet.jpg" }[name]
   end
+
+  def image_card
+    { 'Apple iTunes' => "itunescard.jpg",
+      'Steam Wallet' => "steamcard.jpg",
+      'Blizzard' => "blizzardcard.jpg" }[name]
+  end
+
 end
 
 # through: :category
