@@ -1,0 +1,60 @@
+<div class="container" style="text-align-center">
+  <h1>Gift Cards</h1>
+</div>
+
+<div class="container">
+  <div class="row row-cols-4">
+    <% @subcategories.each do |subcategory| %>
+
+    <div class="col">
+      <%= link_to image_tag(subcategory.card_image), subcategory %>
+      <p><%= subcategory.name %></p>
+    </div>
+    <% end %>
+
+    <div class="col">
+      <%= link_to image_tag('amazon.jpg'), "#" %>
+      <p>Amazon</p>
+    </div>
+
+    <div class="col">
+      <%= link_to image_tag('ebay.jpg'), "#" %>
+      <p>eBay</p>
+    </div>
+
+    <div class="col">
+      <%= link_to image_tag('googleplay.jpg'), "#" %>
+      <p>Google Play</p>
+    </div>
+
+    <div class="col">
+      <%= link_to image_tag('playstation.jpg'), "#" %>
+      <p>Play Station</p>
+    </div>
+
+    <div class="col">
+      <%= link_to image_tag('riot.jpg'), "#" %>
+      <p>Riot Points</p>
+    </div>
+
+    <div class="col">
+      <%= link_to image_tag('garena.jpg'), "#" %>
+      <p>Garena</p>
+    </div>
+
+    <div class="col">
+      <%= link_to image_tag('razergold.jpg'), "#" %>
+      <p>Razer Gold</p>
+    </div>
+
+    <div class="col">
+      <%= link_to image_tag('playpark.jpg'), "#" %>
+      <p>PlayPark</p>
+    </div>
+
+    <div class="col">
+      <%= link_to image_tag('ea.jpg'), "#" %>
+      <p>Electronic Arts (EA)</p>
+    </div>
+  </div>
+</div>

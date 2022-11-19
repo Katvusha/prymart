@@ -8,5 +8,9 @@ Rails.application.routes.draw do
     resources :offers, only: %i[new create]
   end
 
-  resources :offers, only: [:index, :edit, :update]
+  resources :offers, only: %i[index edit update]
+
+  resources :subcategories do
+    resources :products
+  end
 end

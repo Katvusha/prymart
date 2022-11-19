@@ -20,43 +20,49 @@
     </div>
   </div>
 </div>
+<div class="container">
+  <div class="d-flex justify-content-evenly">
+    <div>
+      <%= link_to image_tag("giftcard.png"), subcategories_path %>
+      <p>Gift Cards</p>
+    </div>
 
-<div class="d-flex justify-content-evenly">
-  <div>
-    <i class="fa-duotone fa-gift-card"></i>
-    <p>Gift Cards</p>
-  </div>
+    <div>
+      <%= image_tag("videogame.png") %>
+      <p>Video Games</p>
+    </div>
 
-  <div>
-    <%= image_tag("https://www.flaticon.com/free-icons/gift-card") %>
-    <p>Video Games</p>
-  </div>
+    <div>
+      <%= image_tag("software.png") %>
+      <p>Software</p>
+    </div>
 
-  <div>
-    <p>Software</p>
-  </div>
+    <div>
+      <%= image_tag("coins.png") %>
+      <p>Game coins</p>
+    </div>
 
-  <div>
-    <p>Game coins</p>
-  </div>
+    <div>
+      <%= image_tag("item.png") %>
+      <p>Items</p>
+    </div>
 
-  <div>
-    <p>Items</p>
-  </div>
+    <div>
+      <%= image_tag("account.png") %>
+      <p>Accounts</p>
+    </div>
 
-  <div>
-    <p>Accounts</p>
-  </div>
+    <div>
+      <%= image_tag("gamepal.png") %>
+      <p>GamePal</p>
+    </div>
 
-  <div>
-    <p>GamePal</p>
-  </div>
-
-  <div>
-    <p>Coaching</p>
+    <div>
+      <%= image_tag("coach.png") %>
+      <p>Coaching</p>
+    </div>
   </div>
 </div>
-
 
 
 <div class="trend-items">
@@ -69,7 +75,6 @@
 
   <div id="carouselExampleControls" class="container carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-
       <% @products.each_slice(4).with_index do |products, index| %>
         <div class="carousel-item <%= 'active' if index.zero? %>">
           <div class="d-flex justify-content-evenly w-100">
