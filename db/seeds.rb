@@ -8,9 +8,10 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 puts %(Cleaning up database...)
+Offer.destroy_all
 Product.destroy_all
 User.destroy_all
-Offer.destroy_all
+
 # Category.destroy_all
 # Subcategory.destroy_all
 puts %(Database cleaned!)
