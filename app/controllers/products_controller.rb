@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  before_action :authenticate, only: %i[new create]
+
   def index
     @products = Product.all
     if params[:query].present?
@@ -37,5 +39,14 @@ class ProductsController < ApplicationController
 
   def product_params
     params.require(:product).permit(:name, :price, :quantity, :subcategory_id, :photo)
+  end
+
+  def authenticate
+    if current_user
+      ""
+    else
+      redirect_to new_user_session_path
+      flash[:alert] = "You must be signed in to do this."
+    end
   end
 end

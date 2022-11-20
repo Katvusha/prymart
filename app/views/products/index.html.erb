@@ -81,8 +81,15 @@
             <% products.each do |prod| %>
               <%= link_to(prod) do %>
                 <div class="card-background">
+
+                  <%# Temporarily removed <%= image_tag(prod.card_image) for debugging %>
+
+                  <%# Temporarily removed class="category" below for debugging %>
                   <p><%= prod.subcategory.name %></p>
+
+                  <%# Temporarily removed class="price" below for debugging %>
                   <p>$<%= prod.price %></p>
+
                 </div>
               <% end %>
             <% end %>
