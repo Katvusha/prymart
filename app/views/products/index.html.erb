@@ -10,11 +10,7 @@
 
           <div style="width: 410px";>
             <%= form_with url: products_path, method: :get, class: "d-flex" do %>
-              <%= text_field_tag :query,
-                params[:query],
-                class: "form-control",
-                placeholder: "Find a product"
-              %>
+              <%= text_field_tag :query,params[:query], class: "form-control", placeholder: "Find a product"%>
               <%= submit_tag "Search", class: "btn btn-primary " %>
             <% end %>
           </div>
