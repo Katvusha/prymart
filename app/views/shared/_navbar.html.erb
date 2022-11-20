@@ -21,7 +21,7 @@
           <%# </li> %>
 
           <li class="nav-item dropdown">
-            <%= image_tag(current_user.avatar, alt: "avatar", class: "avatar", style: "margin-bottom:5px", id: "avatar", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
+            <%= image_tag(current_user.avatar, alt: "avatar", class: "avatar", style: "margin-bottom:5px; height: 40px; width: 40px;", id: "avatar", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Manage offers", offers_path, class: "dropdown-item" %>
               <%= link_to "Sell a Product", new_product_path, class: "dropdown-item" %>
