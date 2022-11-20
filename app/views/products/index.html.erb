@@ -115,7 +115,7 @@
 
 
 <div class="trend-items">
-  <h2>Trending Items</h2>
+  <h2>Trending Gift Cards</h2>
   <ol>
     <% @products.each do |product| %>
       <li class="d-none"><%= link_to product.name, product %></li>
@@ -161,30 +161,32 @@
 <div class="btm-screen">
   <div class="container">
     <div class="blue-banner row align-items-center">
-      <div class="col-4">
+      <div class="col-4 content-container">
 
         <!-- Left content -->
         <div>
-          <i class="bi bi-shield-check"></i>
+          <%= image_tag('shield.png') %>
           <h2>Secure Transactions</h2>
           <p>Feel confident each time you transact with us. GamerProtect comes with SSL protection and wide range of payment processors under a safe and secured platform.</p>
         </div>
 
       </div>
 
-      <div class="col-4">
+      <div class="col-4 content-container">
 
         <!-- MID content -->
         <div>
+          <%= image_tag('headset.png') %>
           <h2>Customer Support</h2>
           <p>Our dedicated Customer Service team are available to help with any queries about your orders and provide exceptional after-sales support</p>
         </div>
 
       </div>
-      <div class="col-4">
+      <div class="col-4 content-container">
 
         <!-- Right content -->
         <div>
+          <%= image_tag('discount.png') %>
           <h2>Best Offers</h2>
           <p>Prymart provides competitive pricing to the buyers driven by a free market economy while striving to keep the cost low for our sellers.</p>
         </div>
