@@ -13,7 +13,6 @@ class Subcategory < ApplicationRecord
       'Steam Wallet' => "steamcard.jpg",
       'Blizzard' => "blizzardcard.jpg" }[name]
   end
-
 end
 
 # through: :category
