@@ -10,6 +10,7 @@
 puts %(Cleaning up database...)
 Product.destroy_all
 User.destroy_all
+Offer.destroy_all
 # Category.destroy_all
 # Subcategory.destroy_all
 puts %(Database cleaned!)
