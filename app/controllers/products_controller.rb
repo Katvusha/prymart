@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @subcategories = Subcategory.all
     if params[:query].present?
       @products = Product.search_by_name_and_sub_category(params[:query])
     else
