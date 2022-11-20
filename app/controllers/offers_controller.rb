@@ -19,6 +19,7 @@ class OffersController < ApplicationController
     @offer.status = :pending
     if @offer.save
       redirect_to root_path
+      flash[:alert] = "Offer made succesfully. Please wait for the seller's reply."
     else
       render 'products/show', status: :unprocessable_entity
     end
@@ -49,6 +50,11 @@ class OffersController < ApplicationController
   end
 
   def authenticate
-    redirect_to new_user_session_path unless current_user
+    if current_user
+      ""
+    else
+      redirect_to new_user_session_path
+      flash[:alert] = "You must be signed in to do this."
+    end
   end
 end
