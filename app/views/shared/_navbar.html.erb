@@ -11,14 +11,17 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Sell at Prymart", new_product_path, class: "btn-red btn btn-danger" %>
-          </li>
           <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
+            <button type="button" class="btn btn-outline-danger" style="border-radius: 5px; padding: 0px; padding-left: 10px; padding-right: 10px; font-size: 15px; margin-right: 20px;">
+            <%= link_to "Sell at Prymart", new_product_path, class: "nav-link uniquebtn" %>
           </li>
+
+          <%# <li class="nav-item">
+            <%= link_to "Offers", "#", class: "nav-link" %>
+          <%# </li> %>
+
           <li class="nav-item dropdown">
-            <%= image_tag(current_user.avatar, alt: "avatar", class: "avatar", id: "avatar", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
+            <%= image_tag(current_user.avatar, alt: "avatar", class: "avatar", style: "margin-bottom:5px", id: "avatar", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Manage offers", offers_path, class: "dropdown-item" %>
               <%= link_to "Sell a Product", new_product_path, class: "dropdown-item" %>

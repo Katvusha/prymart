@@ -1,4 +1,4 @@
-<div class="screen-container" style="height:500px;">
+<div class="screen-container" style="height:400px;">
 
   <div class="container">
     <div class="grid">
@@ -10,14 +10,21 @@
 
           <br>
 
-          <div class="border-secondary bg-white text-weight-medium mt-5 shadow-lg p-3" style= "border-radius: 10px;">
+          <div class="bg-white text-weight-medium mt-5 p-3" style="border-radius: 15px; border: solid 1px F5F5D; box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);">
 
-            <div class="text-center">
-              <br>
-              <h2>Sign up for Prymart</h2>
-            </div>
+            <div class="form-inputs" style= "height: 900px;">
 
-            <div class="form-inputs" style= "height: 600px;">
+              <div class="text-center">
+                <br>
+                <h2>Sign up for Prymart</h2>
+                <br>
+              </div>
+
+              <div class="mb-3" style="margin: 0 2rem">
+                <%= f.input :name,
+                            required: true %>
+              </div>
+
               <div class="mb-3" style="margin: 0 2rem">
                 <%= f.input :email,
                             required: true,
@@ -38,14 +45,35 @@
                             input_html: { autocomplete: "new-password" } %>
               </div>
 
+              <br>
+
               <div class="mb-3 gravatar_edit" style="margin: 0 2rem">
                 <%= f.file_field :avatar, placeholder: 'Upload picture',direct_upload: true%>
               </div>
 
-              <div class="form-actions" style="margin: 0 2rem">
-                <%= link_to "Back", products_path, class: "btn btn-primary" %>
-                <%= f.button :submit, "Sign up" %>
+              <br>
+              <br>
+
+              <div class="form-actions" style="margin: 0 2rem;">
+                <%= link_to "Return", products_path, class: "btn btn-outline-secondary", style: "margin-left: 65px; margin-right: 45px; width: 185px; height: 40px; border-radius: 5px;" %>
+                <%= f.button :submit, "Sign up", class: 'btn text-white', style: "width: 185px; height: 40px; border-radius: 5px; background-color: #f03827;" %>
               </div>
+
+
+              <div class ="text-secondary text-center">
+                <br>
+                <br>
+                <p>_________________________________________________________________________</p>
+                <br>
+              </div>
+
+              <div class="media-buttons" style="margin: 0 5rem;">
+                <%= image_tag("media-buttons.png") %>
+              </div>
+
+
+
+
             </div>
 
           </div>
