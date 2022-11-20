@@ -21,8 +21,8 @@
 
           <br>
           <br>
-
-          <a style ="border-radius: 5px;" href="#" type="button" class="btn btn-outline-secondary">Buy now</a>
+          <%= button_to('Buy Now', subcategories_path, class: "btn btn-secondary", type: "button", style: "border-radius: 5px;") %>
+          <%# <a style ="border-radius: 5px;" href="#" type="button" class="btn btn-secondary">Buy now</a> %>
         </div>
 
       </div>
@@ -37,7 +37,7 @@
 </div>
 
 
-<div class="container" style="margin-top: 50px;">
+<div class="container" style="margin-top: 10px;">
   <div class="d-flex justify-content-evenly">
     <div>
       <div class="icon-container">
@@ -50,7 +50,7 @@
 
     <div>
       <div class="icon-container">
-        <%= image_tag("videogame.png", class: "icon-img") %>
+        <%= link_to image_tag("videogame.png", class: "icon-img"), "#" %>
       </div>
       <div>
         <p class="icon-name">Video Games</p>
@@ -59,7 +59,7 @@
 
     <div>
       <div class="icon-container">
-        <%= image_tag("software.png", class: "icon-img") %>
+        <%= link_to image_tag("software.png", class: "icon-img"), "#" %>
       </div>
       <div>
         <p class="icon-name">Software</p>
@@ -68,7 +68,7 @@
 
     <div>
       <div class="icon-container">
-        <%= image_tag("coins.png", class: "icon-img") %>
+        <%= link_to image_tag("coins.png", class: "icon-img"), "#" %>
       </div>
       <div>
         <p class="icon-name">Game coins</p>
@@ -77,7 +77,7 @@
 
     <div>
       <div class="icon-container">
-        <%= image_tag("item.png", class: "icon-img") %>
+        <%= link_to image_tag("item.png", class: "icon-img"), "#" %>
       </div>
       <div>
         <p class="icon-name">Items</p>
@@ -86,7 +86,7 @@
 
     <div>
       <div class="icon-container">
-        <%= image_tag("account.png", class: "icon-img") %>
+        <%= link_to image_tag("account.png", class: "icon-img"), "#" %>
       </div>
       <div>
         <p class="icon-name">Accounts</p>
@@ -95,7 +95,7 @@
 
     <div>
       <div class="icon-container">
-        <%= image_tag("gamepal.png", class: "icon-img") %>
+        <%= link_to image_tag("gamepal.png", class: "icon-img"), "#" %>
       </div>
       <div>
         <p class="icon-name">GamePal</p>
@@ -104,7 +104,7 @@
 
     <div>
       <div class="icon-container">
-        <%= image_tag("coach.png", class: "icon-img") %>
+        <%= link_to image_tag("coach.png", class: "icon-img"), "#" %>
       </div>
       <div>
         <p class="icon-name">Coaching</p>
@@ -124,28 +124,44 @@
 
   <div id="carouselExampleControls" class="container carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-      <% @products.each_slice(4).with_index do |products, index| %>
+      <% @subcategories.each_slice(4).with_index do |subcategories, index| %>
         <div class="carousel-item <%= 'active' if index.zero? %>">
           <div class="d-flex justify-content-evenly w-100">
-            <% products.each do |prod| %>
-              <%= link_to(prod) do %>
+            <% subcategories.each do |sub| %>
+              <%= link_to(sub) do %>
                 <div class="card-background">
-
-                  <%# <%= image_tag(prod.card_image) %>
-
-                  <%# Temporarily removed class="category" below for debugging %>
-                  <p class="category"><%= prod.subcategory.name %></p>
-
-                  <%# Temporarily removed class="price" below for debugging %>
-                  <p class="price">$<%= prod.price %></p>
-
+                  <%= image_tag(sub.card_image) %>
+                  <p class="category"><%= sub.name %></p>
                 </div>
               <% end %>
             <% end %>
+            <div class="card-background">
+              <%= link_to image_tag('amazon.jpg'), "#" %>
+              <p class="category">Amazon</p>
+            </div>
           </div>
         </div>
       <% end %>
-
+        <div class="carousel-item">
+          <div class="d-flex justify-content-evenly w-100">
+            <div class="card-background">
+              <%= link_to image_tag('ea.jpg'), "#" %>
+              <p class="category">ElectronicArts</p>
+            </div>
+            <div class="card-background">
+              <%= link_to image_tag('razergold.jpg'), "#" %>
+              <p class="category">Razer Gold</p>
+            </div>
+            <div class="card-background">
+              <%= link_to image_tag('playstation.jpg'), "#" %>
+              <p class="category">Play Station</p>
+            </div>
+            <div class="card-background">
+              <%= link_to image_tag('riot.jpg'), "#" %>
+              <p class="category">Riot Points</p>
+            </div>
+          </div>
+        </div>
     </div>
 
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -157,6 +173,7 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+</div>
 
 <div class="btm-screen">
   <div class="container">
@@ -206,6 +223,6 @@
     <a href="#"><i class="fab fa-linkedin"></i></a>
   </div>
   <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+    This footer is made with <i class="fas fa-heart"></i> at PryM
   </div>
 </div>
