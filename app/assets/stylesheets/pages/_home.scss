@@ -2,7 +2,10 @@
 .screen-container {
   justify-content: center;
   //background: linear-gradient(lightgray, rgba(lightgray, 0.1))
-  background-image: linear-gradient(rgba(150,0,0,0.1),rgba(150,0,0,0.1)), url(https://res.cloudinary.com/dzjwppn5k/image/upload/v1668649308/green-ambient-bg_coebud.jpg);
+  background-image: linear-gradient(rgba(94, 89, 89, 0.05), rgba(209, 205, 205, 0.3)), url(lichking.jpg);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 //style="background-image: linear-gradient(rgba(150,0,0,0.1),rgba(150,0,0,0.1)), url(https://res.cloudinary.com/dzjwppn5k/image/upload/v1668649308/green-ambient-bg_coebud.jpg);width: 100vw; height: 100vh; background-size: fill; opacity: 0.5"
@@ -43,7 +46,7 @@
     bottom: 16px;
     color: white;
     position: absolute;
-    width: 125px;
+    width: 130px;
     height: 10px;
     left: 62.5px;
     text-align: center;
@@ -113,13 +116,18 @@
 }
 
 .icon-container {
-  border: 1px solid black;
+  //border: 1px solid black;
   padding: 5px;
   border-radius: 20px;
   height: 70px;
   width: 70px;
   display: flex;
   justify-content: center;
+  transition: transform .2s;
+}
+
+.icon-container:hover {
+  transform: scale(1.2);
 }
 
 .icon-name {
