@@ -6,55 +6,55 @@
   <div class="row row-cols-4">
     <% @subcategories.each do |subcategory| %>
 
-    <div class="col">
-      <%= link_to image_tag(subcategory.card_image), subcategory %>
-      <p><%= subcategory.name %></p>
+    <div class="col" style="position: relative; margin-top: 50px;">
+      <%= link_to image_tag(subcategory.card_image, style: "border-radius: 10px;"), subcategory %>
+      <div style="color: white; position: absolute; top: 175px; left: 90px; width: 110px; text-align: center;"><%= subcategory.name %></div>
     </div>
     <% end %>
 
-    <div class="col">
-      <%= link_to image_tag('amazon.jpg'), "#" %>
-      <p>Amazon</p>
+    <div class="col" style="position: relative; margin-top: 50px;">
+      <%= link_to image_tag('amazon.jpg', style: "border-radius: 10px;"), "#" %>
+      <div style="color: white; position: absolute; top: 175px; left: 90px; width: 110px; text-align: center;">Amazon</div>
     </div>
 
-    <div class="col">
-      <%= link_to image_tag('ebay.jpg'), "#" %>
-      <p>eBay</p>
+    <div class="col" style="position: relative; margin-top: 50px;">
+      <%= link_to image_tag('ebay.jpg', style: "border-radius: 10px;"), "#" %>
+      <div style="color: white; position: absolute; top: 175px; left: 90px; width: 110px; text-align: center;">eBay</div>
     </div>
 
-    <div class="col">
-      <%= link_to image_tag('googleplay.jpg'), "#" %>
-      <p>Google Play</p>
+    <div class="col" style="position: relative; margin-top: 50px;">
+      <%= link_to image_tag('googleplay.jpg', style: "border-radius: 10px;"), "#" %>
+      <div style="color: white; position: absolute; top: 175px; left: 90px; width: 110px; text-align: center;">Google Play</div>
     </div>
 
-    <div class="col">
-      <%= link_to image_tag('playstation.jpg'), "#" %>
-      <p>Play Station</p>
+    <div class="col" style="position: relative; margin-top: 50px;">
+      <%= link_to image_tag('playstation.jpg', style: "border-radius: 10px;"), "#" %>
+      <div style="color: white; position: absolute; top: 175px; left: 90px; width: 110px; text-align: center;">Play Station</div>
     </div>
 
-    <div class="col">
-      <%= link_to image_tag('riot.jpg'), "#" %>
-      <p>Riot Points</p>
+    <div class="col" style="position: relative; margin-top: 50px;">
+      <%= link_to image_tag('riot.jpg', style: "border-radius: 10px;"), "#" %>
+      <div style="color: white; position: absolute; top: 175px; left: 90px; width: 110px; text-align: center;">Rot Points</div>
     </div>
 
-    <div class="col">
-      <%= link_to image_tag('garena.jpg'), "#" %>
-      <p>Garena</p>
+    <div class="col" style="position: relative; margin-top: 50px;">
+      <%= link_to image_tag('garena.jpg', style: "border-radius: 10px;"), "#" %>
+      <div style="color: white; position: absolute; top: 175px; left: 90px; width: 110px; text-align: center;">Garena</div>
     </div>
 
-    <div class="col">
-      <%= link_to image_tag('razergold.jpg'), "#" %>
-      <p>Razer Gold</p>
+    <div class="col" style="position: relative; margin-top: 50px;">
+      <%= link_to image_tag('razergold.jpg', style: "border-radius: 10px;"), "#" %>
+      <div style="color: white; position: absolute; top: 175px; left: 90px; width: 110px; text-align: center;">Razer Gold</div>
     </div>
 
-    <div class="col">
-      <%= link_to image_tag('playpark.jpg'), "#" %>
-      <p>PlayPark</p>
+    <div class="col" style="position: relative; margin-top: 50px;">
+      <%= link_to image_tag('playpark.jpg', style: "border-radius: 10px;"), "#" %>
+      <div style="color: white; position: absolute; top: 175px; left: 90px; width: 110px; text-align: center;">PlayPark</div>
     </div>
 
-    <div class="col">
-      <%= link_to image_tag('ea.jpg'), "#" %>
-      <p>Electronic Arts (EA)</p>
+    <div class="col" style="position: relative; margin-top: 50px;">
+      <%= link_to image_tag('ea.jpg', style: "border-radius: 10px;"), "#" %>
+      <div style="color: white; position: absolute; top: 175px; left: 90px; width: 110px; text-align: center;">ElectronicArts</div>
     </div>
   </div>
 </div>

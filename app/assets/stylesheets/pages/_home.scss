@@ -12,7 +12,7 @@
 }
 
 .trend-items {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flexbox;
   justify-content: center;
 }
@@ -110,4 +110,26 @@
     text-align: center;
     color: white;
   }
+}
+
+.icon-container {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 20px;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-name {
+  text-align: center;
+  display: block;
+}
+
+.icon-img {
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin: auto;
 }
