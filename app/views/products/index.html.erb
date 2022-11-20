@@ -1,4 +1,4 @@
-<div class="screen-container" style="margin-top:-42px;">
+<div class="screen-container">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-8">
@@ -131,13 +131,13 @@
               <%= link_to(prod) do %>
                 <div class="card-background">
 
-                  <%# Temporarily removed <%= image_tag(prod.card_image) for debugging %>
+                  <%= image_tag(prod.card_image) %>
 
                   <%# Temporarily removed class="category" below for debugging %>
-                  <p><%= prod.subcategory.name %></p>
+                  <p class="category"><%= prod.subcategory.name %></p>
 
                   <%# Temporarily removed class="price" below for debugging %>
-                  <p>$<%= prod.price %></p>
+                  <p class="price">$<%= prod.price %></p>
 
                 </div>
               <% end %>
