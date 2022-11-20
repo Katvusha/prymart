@@ -7,7 +7,22 @@
         <div>
           <h1><strong>The Lich King returns!</strong></h1>
           <p>WOW Classic Gold</p>
-          <a href="#" type="button" class="btn btn-outline-secondary">Buy now</a>
+
+          <div style="width: 410px";>
+            <%= form_with url: products_path, method: :get, class: "d-flex" do %>
+              <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                placeholder: "Find a product"
+              %>
+              <%= submit_tag "Search", class: "btn btn-primary " %>
+            <% end %>
+          </div>
+
+          <br>
+          <br>
+
+          <a style ="border-radius: 5px;" href="#" type="button" class="btn btn-outline-secondary">Buy now</a>
         </div>
 
       </div>

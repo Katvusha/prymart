@@ -10,8 +10,9 @@ class Product < ApplicationRecord
   validates :name, presence: true
   validates :price, presence: true
 
-  pg_search_scope :search_by_name_and_category,
-                  against: %i[name category],
+  pg_search_scope :search_by_name_and_sub_category,
+                  against: %i[name],
+                  associated_against: { subcategory: %i[name] },
                   using: { tsearch: { prefix: true } }
 
   def card_image
