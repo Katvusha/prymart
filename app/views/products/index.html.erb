@@ -1,4 +1,4 @@
-<div class="screen-container">
+<div class="screen-container" style="margin-top:-42px;">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-8">
@@ -35,46 +35,80 @@
     </div>
   </div>
 </div>
-<div class="container">
+
+
+<div class="container" style="margin-top: 50px;">
   <div class="d-flex justify-content-evenly">
     <div>
-      <%= link_to image_tag("giftcard.png"), subcategories_path %>
-      <p>Gift Cards</p>
+      <div class="icon-container">
+        <%= link_to image_tag("giftcard.png", class: "icon-img"), subcategories_path %>
+      </div>
+      <div>
+        <p class="icon-name">Gift Cards</p>
+      </div>
     </div>
 
     <div>
-      <%= image_tag("videogame.png") %>
-      <p>Video Games</p>
+      <div class="icon-container">
+        <%= image_tag("videogame.png", class: "icon-img") %>
+      </div>
+      <div>
+        <p class="icon-name">Video Games</p>
+      </div>
     </div>
 
     <div>
-      <%= image_tag("software.png") %>
-      <p>Software</p>
+      <div class="icon-container">
+        <%= image_tag("software.png", class: "icon-img") %>
+      </div>
+      <div>
+        <p class="icon-name">Software</p>
+      </div>
     </div>
 
     <div>
-      <%= image_tag("coins.png") %>
-      <p>Game coins</p>
+      <div class="icon-container">
+        <%= image_tag("coins.png", class: "icon-img") %>
+      </div>
+      <div>
+        <p class="icon-name">Game coins</p>
+      </div>
     </div>
 
     <div>
-      <%= image_tag("item.png") %>
-      <p>Items</p>
+      <div class="icon-container">
+        <%= image_tag("item.png", class: "icon-img") %>
+      </div>
+      <div>
+        <p class="icon-name">Items</p>
+      </div>
     </div>
 
     <div>
-      <%= image_tag("account.png") %>
-      <p>Accounts</p>
+      <div class="icon-container">
+        <%= image_tag("account.png", class: "icon-img") %>
+      </div>
+      <div>
+        <p class="icon-name">Accounts</p>
+      </div>
     </div>
 
     <div>
-      <%= image_tag("gamepal.png") %>
-      <p>GamePal</p>
+      <div class="icon-container">
+        <%= image_tag("gamepal.png", class: "icon-img") %>
+      </div>
+      <div>
+        <p class="icon-name">GamePal</p>
+      </div>
     </div>
 
     <div>
-      <%= image_tag("coach.png") %>
-      <p>Coaching</p>
+      <div class="icon-container">
+        <%= image_tag("coach.png", class: "icon-img") %>
+      </div>
+      <div>
+        <p class="icon-name">Coaching</p>
+      </div>
     </div>
   </div>
 </div>
@@ -131,6 +165,7 @@
 
         <!-- Left content -->
         <div>
+          <i class="bi bi-shield-check"></i>
           <h2>Secure Transactions</h2>
           <p>Feel confident each time you transact with us. GamerProtect comes with SSL protection and wide range of payment processors under a safe and secured platform.</p>
         </div>
