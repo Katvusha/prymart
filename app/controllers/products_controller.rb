@@ -15,10 +15,12 @@ class ProductsController < ApplicationController
   end
 
   def new
+    @subcategories = Subcategory.all
     @product = Product.new
   end
 
   def create
+    @subcategories = Subcategory.all
     @product = Product.create(product_params)
     # TODO: use devise to allocate user
     @product.user = User.last
@@ -34,6 +36,6 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :price, :photo, :category)
+    params.require(:product).permit(:name, :price, :quantity, :subcategory_id)
   end
 end
