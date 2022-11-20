@@ -73,6 +73,35 @@
     <% end %>
   </ol>
 
+  <div id="carouselExampleControls" class="container carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <% @products.each_slice(4).with_index do |products, index| %>
+        <div class="carousel-item <%= 'active' if index.zero? %>">
+          <div class="d-flex justify-content-evenly w-100">
+            <% products.each do |prod| %>
+              <%= link_to(prod) do %>
+                <div class="card-background">
+                  <%= image_tag(prod.card_image) %>
+                  <p class="category"><%= prod.subcategory.name %></p>
+                  <p class="price">$<%= prod.price %></p>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div >
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
 <div class="btm-screen">
   <div class="container">
     <div class="blue-banner row align-items-center">
