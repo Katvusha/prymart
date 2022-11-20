@@ -1,24 +1,49 @@
-
-<div style="background-image: linear-gradient(rgba(150,0,0,0.1),rgba(150,0,0,0.1)), url(https://res.cloudinary.com/dzjwppn5k/image/upload/v1668649308/green-ambient-bg_coebud.jpg);width: 100vw; height: 100vh; background-size: fill; opacity: 0.5">
+<div class="devise-container" style="height:400px;">
   <div class="container">
-    <div class="row">
-      <div class="col-6 mx-auto">
-      <br>
-      <br>
-        <h4>List it yourself</h4>
-        <h5>Find your own buyers</h5>
-      <br>
-        <%= simple_form_for(@product) do |f| %>
-          <%= f.input :name %>
-          <%= f.input :price %>
-          <%= f.association :subcategory %>
-          <%= f.input :quantity %>
-          <%= f.submit %>
-        <% end %>
-        <br>
+      <div class="grid">
+        <div class="col-6 mx-auto">
+          <div class="form">
+            <%= simple_form_for(@product) do |f| %>
+            <br>
 
-        <h6><%= link_to "Back", products_path, class: "btn btn-primary" %></h6>
+            <div class="bg-white text-weight-medium mt-5 p-3" style="border-radius: 15px; border: solid 1px F5F5D; box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);">
+
+              <div class="text-center">
+                <br>
+                <br>
+                <h4>List an item for sale:</h4>
+                <h5></h5>
+                <br>
+              </div>
+
+              <div class="form-inputs" style= "height: 500px;">
+                <div class="mb-3" style="margin: 0 2rem">
+                  <%= f.input :name %>
+                </div>
+                <div class="mb-3" style="margin: 0 2rem">
+                  <%= f.input :price %>
+                </div>
+                <div class="mb-3" style="margin: 0 2rem">
+                  <%= f.association :subcategory %>
+                </div>
+                <div class="mb-3" style="margin: 0 2rem">
+                  <%= f.input :quantity %>
+                </div>
+
+                <br>
+
+                <div class="form-actions text-center" style="margin: 0 2rem">
+                  <%= link_to "Return", products_path, class: "btn btn-outline-secondary", style: "margin-left: 10px; margin-right: 35px; width: 175px; height: 40px; border-radius: 5px;" %>
+                  <%= f.button :submit, "Submit", class: 'btn text-white', style: "width: 175px; height: 40px; border-radius: 5px; background-color: #f03827;" %>
+                </div>
+
+              </div>
+
+            </div>
+
+            <% end %>
+          </div>
+        </div>
       </div>
-    </div>
   </div>
 </div>
