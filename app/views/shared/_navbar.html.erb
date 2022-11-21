@@ -1,8 +1,8 @@
-<nav style="position: fixed; z-index: 1; top: 0; height: 76px" class="w-100 navcon navbar navbar-expand-sm navbar-light navbar-lewagon shadow-sm bg-white rounded">
+<nav style="position: fixed; z-index: 1; top: 0; height: 70px" class="w-100 navcon navbar navbar-expand-sm navbar-light navbar-lewagon shadow-lg p-3 mb-5 bg-white rounded">
   <div class="container">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag("logo.png", :class => "mr-5 h-2 w-2") %>
-      Prymart
+      <%= image_tag("g2g.png", :class => "mr-5 h-2 w-2") %>
+      <p style="display:inline; padding-left: 7px; margin-top: 5px; color: red;  font-weight: bold; font-size:">PRYMART</p>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,14 +11,17 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Sell at Prymart", new_product_path, class: "btn-red btn btn-danger" %>
-          </li>
           <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
+            <button type="button" class="btn btn-outline-danger" style="border-radius: 5px; padding: 0px; padding-left: 10px; padding-right: 10px; font-size: 15px; margin-right: 20px;">
+            <%= link_to "Sell at Prymart", new_product_path, class: "nav-link uniquebtn" %>
           </li>
+
+          <%# <li class="nav-item">
+            <%= link_to "Offers", "#", class: "nav-link" %>
+          <%# </li> %>
+
           <li class="nav-item dropdown">
-            <%= image_tag(current_user.avatar, alt: "avatar", class: "avatar", id: "avatar", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
+            <%= image_tag(current_user.avatar, alt: "avatar", class: "avatar", style: "margin-bottom:5px; height: 40px; width: 40px;", id: "avatar", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Manage offers", offers_path, class: "dropdown-item" %>
               <%= link_to "Sell a Product", new_product_path, class: "dropdown-item" %>
@@ -28,7 +31,8 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <button type="button" class="btn btn-outline-danger" style="border-radius: 5px; padding: 0px; padding-left: 10px; padding-right: 10px; font-size: 15px;">
+            <%= link_to "Login", new_user_session_path, class: "nav-link uniquebtn" %>
           </li>
         <% end %>
       </ul>
@@ -36,4 +40,4 @@
   </div>
 </nav>
 
-<div class="container" style="margin-top: 120px"></div>
+<div class="container" style="margin-top: 70px"></div>

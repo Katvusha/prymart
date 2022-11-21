@@ -6,14 +6,14 @@
         <div class="col-12 col-lg-9 p-3">
           <div class="d-flex justify-content-between bg-white p-3 border g-border-light border-1" style="border-radius: 15px">
             <div class="align-self-center p-2">
-              <%= image_tag("itunes.jpg", :style => "border-radius: 5px") %>
+              <%= image_tag(@product.image_card, :style => "border-radius: 10px; height: 180px; width: 280px;") %>
             </div>
             <div class="flex-grow-1 p-2">
               <small>
                 <ul class="list-group list-group-flush">
 
                   <li class="list-group-item px-0 border-bottom-0">
-                    <h2 class="fw-bold"><%= @product.name %></h2>
+                    <h2 class="fw-bold"><%= @product.subcategory.name %> <%= @product.name %></h2>
                   </li>
 
                   <li class="list-group-item px-0 border-bottom-0">
@@ -81,7 +81,7 @@
               <li class="list-group-item">
                 <div class="d-flex justify-content-between">
                   <div class="text-muted">Stock</div>
-                  <div>4</div>
+                  <div><%= @product.quantity %></div>
                 </div>
               </li>
 
@@ -103,7 +103,7 @@
               <li class="list-group-item border-bottom-0">
                   <%= simple_form_for([@product, @offer]) do |f| %>
                   <div class="d-grid gap-2">
-                    <%= f.submit "Order", class: "p-3 m-2 btn btn-danger text-white", style: "border-radius: 5px" %>
+                    <%= f.submit "Order", class: "m-2 btn btn text-white", style: "border-radius: 5px; background-color: #f03827; padding-top: 10px; padding-bottom: 10px" %>
                   </div>
                   <%end%>
               </li>

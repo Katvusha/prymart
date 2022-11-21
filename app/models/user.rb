@@ -7,4 +7,7 @@ class User < ApplicationRecord
   has_one_attached :avatar
   has_many :products
   has_many :offers
+  def avatar_thumbnail
+    avatar.variant(resize: "300x300!").processed
+  end
 end
