@@ -12,8 +12,8 @@ Offer.destroy_all
 Product.destroy_all
 User.destroy_all
 
-# Category.destroy_all
-# Subcategory.destroy_all
+Category.destroy_all
+Subcategory.destroy_all
 puts %(Database cleaned!)
 
 card = Category.create!(name: "card")
