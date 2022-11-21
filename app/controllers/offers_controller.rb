@@ -26,11 +26,19 @@ class OffersController < ApplicationController
   end
 
   def update
+    @product = Product.find(params[:id])
     @offer = Offer.find(params[:id])
+
     if statuses.include?(params[:commit])
       @offer.status = params[:commit].downcase.to_sym
+
       if @offer.save
         redirect_to product_offers_path(@offer.product_id)
+
+      elsif @offer.save && @offer.status == 'Accepted'
+        redirect_to product_offers_path(@offer.product_id)
+        @offer.product.quantity -= 1
+
       else
         redirect_to root_path
       end
