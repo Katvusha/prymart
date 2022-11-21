@@ -37,7 +37,7 @@
 </div>
 
 
-<div class="container" style="margin-top: 10px;">
+<div class="container" style="margin-top: 30px;">
   <div class="d-flex justify-content-evenly">
 
     <div>
@@ -177,6 +177,28 @@
     </button>
   </div>
 </div>
+
+
+<div class="trend-items">
+  <h2>All Product</h2>
+</div>
+<div class="container">
+    <div class="row row-cols-4 justify-content-evenly w-100">
+    <% @products.first(10).each do |prod| %>
+      <div class="col" style="width: 250px;" >
+        <%= link_to product_path(prod), style: "text-decoration: none;" do %>
+        <div class="card" style="width: 250px; height: 270px; margin-top: 20px; border-radius: 10px;">
+          <%= image_tag(prod.image_card, class: "card-img-top image-card", style: "width: 280; height: 180px; object-fit: cover; border-radius: 10px, 10px , 0, 0;") %>
+          <div class="card-body">
+            <p style="color: black;"><%= prod.name %></p>
+            <p style="color: black;">$<%= prod.price %></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    <% end %>
+    </div>
+  </div>
 
 <div class="btm-screen">
   <div class="container">
