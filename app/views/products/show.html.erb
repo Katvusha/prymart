@@ -67,7 +67,7 @@
               <li class="list-group-item text-white" style="background: rgb(19, 202, 168)">
                 <div class="d-flex justify-content-between">
                   <div class="align-self-center">Unit Price</div>
-                  <div><h3 class="fw-bold m-0"><%= @product.price %><span class="fs-6 fw-light m-0"> SGD</span></h3></div>
+                  <div><h3 class="fw-bold m-0"><%= sprintf('%.2f', @product.price) %><span class="fs-6 fw-light m-0"> SGD</span></h3></div>
                 </div>
               </li>
 
@@ -96,7 +96,7 @@
               <li class="list-group-item bg-light border-top-0 border-bottom-0">
                 <div class="d-flex justify-content-between">
                   <div class="align-self-center text-muted">Price</div>
-                  <div><h3 class="fw-bold m-0"><%= @product.price %><span class="fs-6 fw-light m-0"> SGD</span></h3></div>
+                  <div><h3 class="fw-bold m-0"><%= sprintf('%.2f', @product.price) %><span class="fs-6 fw-light m-0"> SGD</span></h3></div>
                 </div>
               </li>
 
