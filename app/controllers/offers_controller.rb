@@ -35,16 +35,17 @@ class OffersController < ApplicationController
       if @offer.save
         redirect_to product_offers_path(@offer.product_id)
 
-      elsif @offer.save && @offer.status == 'Accepted'
-        redirect_to product_offers_path(@offer.product_id)
-        @offer.product.quantity -= 1
-
       else
         redirect_to root_path
       end
     else
       redirect_to root_path
     end
+  end
+
+  def destroy
+    Offer.destroy(params[:id])
+    redirect_to offers_path
   end
 
   private
