@@ -8,6 +8,14 @@
   background-repeat: no-repeat;
 }
 
+.banner-title {
+  color: red;
+}
+
+.banner-description {
+  color: white;
+}
+
 .devise-container {
   justify-content: center;
   //background: linear-gradient(lightgray, rgba(lightgray, 0.1))
@@ -125,7 +133,7 @@
 }
 
 .icon-container {
-  //border: 1px solid black;
+  border: 1px solid black;
   padding: 5px;
   border-radius: 20px;
   height: 70px;
