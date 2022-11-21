@@ -48,7 +48,9 @@
               <br>
 
               <div class="mb-3 gravatar_edit" style="margin: 0 2rem">
-                <%= f.file_field :avatar, placeholder: 'Upload picture',direct_upload: true%>
+                <%= f.label "Upload your avatar *", class: "d-block" %>
+                <br>
+                <%= f.file_field :avatar, placeholder: 'Upload picture', direct_upload: true%>
               </div>
 
               <br>
