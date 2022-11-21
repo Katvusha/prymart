@@ -8,6 +8,12 @@ class User < ApplicationRecord
   has_many :products
   has_many :offers
   def avatar_thumbnail
+    # return default version unless avatar.attached?
+
     avatar.variant(resize: "300x300!").processed
   end
+
+  # def avatar_key
+    # avatar.attached? ? avatar.key : ""
+  # end
 end
