@@ -10,7 +10,7 @@
         <div class="card" style="width: 280px; height: 270px; margin-top: 20px; border-radius: 10px;">
           <%= image_tag(@subcategory.image_card, class: "card-img-top image-card", style: "width: 280; height: 180px; object-fit: cover; border-radius: 10px, 10px , 0, 0;") %>
           <div class="card-body">
-            <p style="color: black;"><%= @subcategory.name %><%= prod.name %></p>
+            <p style="color: black;"><%= @subcategory.name %> <%= prod.name %></p>
             <p style="color: black;">$<%= prod.price %></p>
           </div>
         </div>
