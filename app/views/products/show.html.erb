@@ -132,8 +132,10 @@
 
 <div class="d-flex justify-content-center">
   <div class="col-lg-8 list-group">
-      <button type="button" class="list-group-item list-group-item-action">
-        A button item
-      </button>
+      <% @products.each do |product| %>
+        <button type="button" class="list-group-item list-group-item-action">
+          <%= link_to product.name, product_path(product) %>
+        </button>
+      <% end %>
   </div>
 </div>
