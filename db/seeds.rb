@@ -16,6 +16,11 @@ User.destroy_all
 # Subcategory.destroy_all
 puts %(Database cleaned!)
 
+card = Category.create!(name: "card")
+steam = Subcategory.create!(name: "Steam Wallet", category: card)
+apple = Subcategory.create!(name: "Apple iTunes", category: card)
+blizzard = Subcategory.create!(name: "Blizzard", category: card)
+
 16.times do
   new_user = User.create!(
     name: Faker::Name.name,
