@@ -60,13 +60,15 @@
 
   .category {
     position: absolute;
-    bottom: 16px;
-    color: white;
+    bottom: 1px;
     position: absolute;
     width: 130px;
-    height: 10px;
     left: 62.5px;
     text-align: center;
+    color:  whitesmoke;
+    text-shadow: 1px 1px black;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 5px;
   }
 
   .price {
@@ -79,6 +81,14 @@
     left: 115.5px;
     text-align: right;
   }
+}
+
+.categorylite {
+  text-align: center;
+  color:  whitesmoke;
+  text-shadow: 1px 1px black;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 5px;
 }
 
 .btm-screen {
